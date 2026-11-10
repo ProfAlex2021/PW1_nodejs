@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda de contatos</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Agenda de contatos</h1>
+    <label class="switch">
+      <input type="checkbox" id="tema-toggle" role="switch">
+      <span class="trilho" aria-hidden="true"></span>
+      <span class="rotulo">Tema escuro</span>
+    </label>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="linha">
+        <label class="campo">
+          Armazenamento
+          <select id="armazenamento">
+            <option value="local">localStorage</option>
+            <option value="idb">indexedDB</option>
+            <option value="cookie">cookieStore</option>
+          </select>
+        </label>
+        <button type="button" id="carregar" class="ghost">Carregar dados</button>
+      </div>
+
+      <form id="form" class="form">
+        <label class="campo">
+          Nome
+          <input name="nome" required autocomplete="off">
+        </label>
+        <label class="campo">
+          Telefone
+          <input name="telefone" type="tel" required autocomplete="off">
+        </label>
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <p id="msg" role="status"></p>
+    </section>
+
+    <ul id="lista" class="lista"></ul>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
